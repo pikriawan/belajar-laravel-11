@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.brand {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.navbar-link {
+    color: #007FFF;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar-link.active {
+    color: black;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 600;
+}
