@@ -1,0 +1,42 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 4rem 0;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.article-title {
+    color: black;
+    text-decoration: none;
+}
+
+.article-title h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.article-author {
+    color: #FF4F00;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.article-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    background-color: #FF4F00;
+    color: white;
+}
