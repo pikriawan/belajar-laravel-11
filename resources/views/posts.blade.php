@@ -7,7 +7,16 @@
                 <h3>{{ $post->title }}</h3>
             </a>
             <header class="article-header">
-                <a class="article-author" href="#">{{ $post->author }}</a> | {{ $post->created_at->diffForHumans() }}
+                By
+                <a class="article-author" href="/authors/{{ $post->author->id }}">
+                    {{ $post->author->name }}
+                </a>
+                in
+                <a class="article-category" href="/categories/{{ $post->category->slug }}">
+                    {{ $post->category->name }}
+                </a>
+                |
+                {{ $post->created_at->diffForHumans() }}
             </header>
             <p class="article-text">{{ Str::limit($post->body, 150) }}</p>
             <a class="article-more" href="/posts/{{ $post->slug }}">
