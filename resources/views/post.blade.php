@@ -5,7 +5,7 @@
         <h3 class="article-title">{{ $post->title }}</h3>
         <header class="article-header">
             By
-            <a class="article-author" href="/authors/{{ $post->author->id }}">
+            <a class="article-author" href="/authors/{{ $post->author->username }}">
                 {{ $post->author->name }}
             </a>
             in

@@ -43,9 +43,9 @@ Route::get('/contact', function () {
     ]);
 });
 
-Route::get('/authors/{user}', function (User $user) {
+Route::get('/authors/{user:username}', function (User $user) {
     return view('posts', [
-        'title' => 'Articles by ' . $user->name,
+        'title' => count($user->posts) . ' articles by ' . $user->name,
         'style' => '/css/posts.css',
         'posts' => $user->posts,
     ]);
@@ -53,7 +53,7 @@ Route::get('/authors/{user}', function (User $user) {
 
 Route::get('/categories/{category:slug}', function (Category $category) {
     return view('posts', [
-        'title' => 'Articles with category "' . $category->name . '"',
+        'title' => count($category->posts) . ' articles in category ' . $category->name,
         'style' => '/css/posts.css',
         'posts' => $category->posts,
     ]);
