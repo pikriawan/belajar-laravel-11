@@ -2,18 +2,17 @@
     <x-slot:style>{{ $style }}</x-slot>
     <x-slot:title>{{ $title }}</x-slot>
     <article class="article">
-        <h3 class="article-title">{{ $post->title }}</h3>
         <header class="article-header">
-            By
             <a class="article-author" href="/authors/{{ $post->author->username }}">
                 {{ $post->author->name }}
             </a>
-            in
-            <a class="article-category" href="/categories/{{ $post->category->slug }}">
+            <a class="article-category" href="/categories/{{ $post->category->slug }}" style="{{ $post->category->color != null ? "color: " . $post->category->color . ";" : "" }}{{ $post->category->background_color != null ? "background-color: " . $post->category->background_color . ";" : "" }}">
                 {{ $post->category->name }}
             </a>
-            |
-            {{ $post->created_at->diffForHumans() }}
+            <span class="article-timestamp">
+                {{ $post->created_at->diffForHumans() }}
+            </span>
+            <h3 class="article-title">{{ $post->title }}</h3>
         </header>
         <p class="article-text">{{ $post->body }}</p>
         <a class="article-back" href="/posts">

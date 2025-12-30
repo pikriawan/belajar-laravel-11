@@ -2,3 +2,15 @@
     width: 100%;
     max-width: 48rem;
 }
+
+@media (min-width: 768px) {
+    .content {
+        max-width: 56rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .content {
+        max-width: 72rem;
+    }
+}
