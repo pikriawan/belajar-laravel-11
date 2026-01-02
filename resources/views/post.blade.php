@@ -3,10 +3,10 @@
     <x-slot:title>{{ $title }}</x-slot>
     <article class="article">
         <header class="article-header">
-            <a class="article-author" href="/authors/{{ $post->author->username }}">
+            <a class="article-author" href="/posts?author={{ $post->author->username }}">
                 {{ $post->author->name }}
             </a>
-            <a class="article-category" href="/categories/{{ $post->category->slug }}" style="{{ $post->category->color != null ? "color: " . $post->category->color . ";" : "" }}{{ $post->category->background_color != null ? "background-color: " . $post->category->background_color . ";" : "" }}">
+            <a class="article-category" href="/posts?category={{ $post->category->slug }}" style="{{ $post->category->color != null ? "color: " . $post->category->color . ";" : "" }}{{ $post->category->background_color != null ? "background-color: " . $post->category->background_color . ";" : "" }}">
                 {{ $post->category->name }}
             </a>
             <span class="article-timestamp">
