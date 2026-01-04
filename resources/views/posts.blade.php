@@ -48,4 +48,5 @@
             </div>
         @endforelse
     </div>
+    {{ $posts->links() }}
 </x-layout>
